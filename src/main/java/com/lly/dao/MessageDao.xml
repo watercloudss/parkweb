@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lly.dao.MessageDao">
+    <insert id="insertMessage">
+		insert into message
+		values(null,#{title},#{content},#{creatTime},#{uid})
+	</insert>
+    <select id="messageList" resultMap="messageResult">
+		select * from message m,user u where m.uid=u.id
+	</select>
+    <delete id="deleteMessage">
+	delete from message where id=#{id}
+	</delete>
+    <resultMap type="message" id="messageResult">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="creatTime" column="creatTime"/>
+        <association property="user" javaType="user">
+            <id property="id" column="id"></id>
+            <result property="name" column="name"/>
+        </association>
+    </resultMap>
+</mapper>

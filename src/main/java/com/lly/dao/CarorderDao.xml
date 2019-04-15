@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lly.dao.CarorderDao">
+    <insert id="insertCarorder">
+		insert into carorder
+		values(null,#{province},#{carNumber},#{customerName},#{customerPhone},#{startTime},null,#{cost},#{time},#{state},#{cid},#{sid},#{uid})
+	</insert>
+    <update id="updateCarorderEnd">
+		update carorder set endTime=#{endTime},cost=#{cost},time=#{time},state=#{state} where id=#{id}
+	</update>
+    <select id="selectCarorder" resultType="carorder">
+		select * from carorder where province like #{province} and carNumber like
+		#{carNumber} and state=0
+	</select>
+    <select id="selectBySid" resultType="carorder">
+	select * from carorder where sid=#{sid} and state=0
+	</select>
+    <select id="carorderListBytime" resultType="carorder">
+	select * from carorder where startTime Between #{amTime} and #{clickTime} and state=1 and uid=#{uid}
+	</select>
+</mapper>

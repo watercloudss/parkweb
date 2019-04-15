@@ -1,0 +1,72 @@
+.icon {
+    height: 15px;
+    width: 15 px��
+}
+
+.icon-text {
+    margin-left: 5px;
+    font-size: 12px
+}
+
+.main {
+    margin-top: 100px;
+    height: 600px;
+    border-radius: 20px;
+    background: #f5f5f5;
+}
+
+.imglocation {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.col-md-3 .main-userImg {
+    width: 180px;
+    height: 180px;
+    padding: 3px;
+    border: 1px solid #d5d5d5;
+}
+
+.btn {
+    margin-left: 16px;
+    margin-top: 8px;
+    background: #8a8a8a;
+    height: 30px;
+    width: 150px;
+    color: white;
+    border-radius: 7px
+}
+
+.user-info {
+    margin-top: 50px;
+}
+
+.info-margin {
+    margin-top: 10px;
+}
+
+.left {
+    color: #8a8a8a;
+}
+
+.right {
+    font-size: 16px;
+    color: #515151;
+}
+
+.text {
+    font-weight: bold;
+}
+
+.btn1 {
+    margin-top: 30px;
+    background: #37a;
+    height: 30px;
+    width: 120px;
+    color: white;
+    border-radius: 7px
+}
+
+.error {
+    color: red;
+}

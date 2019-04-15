@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lly.dao.CarspaceDao">
+    <sql id="selectAll">
+        <if test="start !=0 and rows !=0">
+            limit #{start},#{rows}
+        </if>
+    </sql>
+    <insert id="insertCarspace" parameterType="carspace">
+		insert into carspace
+		values(null,#{s_name},#{s_location},#{s_state},#{s_type},#{s_price},#{s_pricetime},#{c_id})
+	</insert>
+    <select id="carspaceList" resultMap="cardetailsResult">
+		select * from carstation c
+		right join carspace s on c.c_id=s.c_id
+		where c.c_id=#{id} limit #{start},#{rows}
+	</select>
+    <select id="carspaceListInto" resultMap="cardetailsResult">
+		select * from carstation c
+		right join carspace s on c.c_id=s.c_id
+		where c.c_id=#{id}
+	</select>
+    <select id="selectCpAndCsById" resultMap="carCpAndCsResult">
+		select * from carspace
+		s join carstation c on s.c_id=c.c_id where
+		s.s_id=#{id}
+	</select>
+    <select id="selectByName" resultMap="carCpAndCsResult">
+		select * from carspace s
+		join carstation c on s.c_id=c.c_id where
+		s.s_name=#{name}
+	</select>
+    <select id="count" resultType="Integer">
+		select count(*) from carstation c
+		right join carspace s on c.c_id=s.c_id
+		where c.c_id=#{id}
+	</select>
+    <select id="countSpace" resultType="Integer">
+	select count(*) from carspace
+	</select>
+    <select id="countPark" resultType="Integer">
+	select count(*) from carspace where s_state=#{state}
+	</select>
+    <update id="updateCarspace" parameterType="carspace">
+		update carspace set
+		s_name=#{s_name},s_location=#{s_location},s_type=#{s_type},s_price=#{s_price},s_pricetime=#{s_pricetime}
+		where s_id=#{s_id}
+	</update>
+    <update id="updateCarspaceState">
+		update carspace set s_state=#{s_state} where
+		s_id=#{s_id}
+	</update>
+    <update id="updateCarspacePriceAndTime" parameterType="carspace">
+		update
+		carspace set s_price=#{s_price},s_pricetime=#{s_pricetime}
+		where
+		c_id=#{c_id}
+	</update>
+    <delete id="deleteCarspace">
+		delete from carspace where s_id=#{id}
+	</delete>
+    <resultMap type="carspace" id="carCpAndCsResult">
+        <id property="s_id" column="s_id"/>
+        <result property="s_name" column="s_name"/>
+        <result property="s_location" column="s_location"/>
+        <result property="s_state" column="s_state"/>
+        <result property="s_type" column="s_type"/>
+        <result property="s_price" column="s_price"/>
+        <result property="s_pricetime" column="s_pricetime"/>
+        <association property="carstation" javaType="carstation">
+            <id property="c_id" column="c_id"></id>
+            <result property="c_name" column="c_name"/>
+            <result property="c_location" column="c_location"/>
+            <result property="c_price" column="c_price"/>
+            <result property="c_pricetime" column="c_pricetime"/>
+        </association>
+    </resultMap>
+    <resultMap type="carstation" id="cardetailsResult">
+        <id property="c_id" column="c_id"/>
+        <result property="c_name" column="c_name"/>
+        <result property="c_location" column="c_location"/>
+        <result property="c_description" column="c_description"/>
+        <result property="c_total" column="c_total"/>
+        <result property="c_code" column="c_code"/>
+        <result property="c_price" column="c_price"/>
+        <result property="c_pricetime" column="c_pricetime"/>
+        <collection property="spaceList" ofType="carspace">
+            <id property="s_id" column="s_id"></id>
+            <result property="s_name" column="s_name"/>
+            <result property="s_location" column="s_location"/>
+            <result property="s_state" column="s_state"/>
+            <result property="s_type" column="s_type"/>
+            <result property="s_price" column="s_price"/>
+            <result property="s_pricetime" column="s_pricetime"/>
+        </collection>
+    </resultMap>
+</mapper>

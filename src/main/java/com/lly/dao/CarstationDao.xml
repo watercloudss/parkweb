@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lly.dao.CarstationDao">
+    <insert id="insertCarstation" parameterType="carstation">
+insert into carstation values(null,#{c_name},#{c_location},#{c_description},#{c_total},#{c_code},#{c_price},#{c_pricetime})
+</insert>
+    <select id="cList" resultType="carstation">
+select * from carstation
+</select>
+    <select id="count" resultType="Integer">
+select count(*) from carstation
+</select>
+    <select id="selectByCode" parameterType="String" resultType="Integer">
+select c_id from carstation where c_code=#{code}
+</select>
+    <update id="updateCarstation" parameterType="carstation">
+update carstation set c_name=#{c_name},c_location=#{c_location},c_description=#{c_description},c_price=#{c_price},c_pricetime=#{c_pricetime} where c_id=#{c_id}
+</update>
+    <update id="updateCarstationTotal" parameterType="carstation">
+update carstation set c_total=#{c_total} where c_id=#{c_id} 
+</update>
+    <delete id="deleteCarstation">
+delete from carstation where c_id=#{id}
+</delete>
+</mapper>

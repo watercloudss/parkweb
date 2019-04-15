@@ -1,0 +1,138 @@
+.col-md-3 {
+    border-radius: 25px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.col-md-3 img {
+    margin-top: 30px;
+}
+
+.two {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px
+}
+
+.three {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.four {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    background: #d9edf7;
+    font-weight: bold;
+    color: #37a;
+}
+
+.five {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    background: #fcf8e3;
+    font-weight: bold;
+    color: #37a;
+}
+
+.timeAndName {
+    font-size: 9px;
+}
+
+.message-title {
+    margin-left: 30px;
+}
+
+.message-content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.welcome {
+    padding: 10px 50px;
+    border-radius: 30px;
+    margin-top: 80px;
+    color: #37a;
+    background: #d3d3d3;
+    margin-bottom: 10px;
+}
+
+.OCRcarnumber {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 3px;
+    text-align: center;
+    background: #00B51D;
+    display: block;
+    border-radius: 10px;
+    color: white;
+}
+
+.icon {
+    height: 15px;
+    width: 15 px��
+}
+
+.icon-text {
+    margin-left: 5px;
+    font-size: 12px
+}
+
+.redColor {
+    color: #f40;
+}
+
+.greenColor {
+    color: #00B51D;
+}
+
+.error {
+    color: red;
+}
+
+em {
+    font-size: 8px;
+    font-weight: bold;
+    color: #f40;
+}
+
+.endBtn {
+    display: block;
+    background: #f40;
+    border-radius: 5px;
+    color: white;
+    width: 40px;
+    text-align: center;
+}
+
+.weatherLocation {
+    position: fixed;
+    left: 5px;
+    top: 80px;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.btn9 {
+    display: block;
+    padding: 0;
+    background: #f40;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+}

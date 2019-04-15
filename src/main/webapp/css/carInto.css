@@ -1,0 +1,97 @@
+.icon {
+    height: 15px;
+    width: 15 px��
+}
+
+.icon-text {
+    margin-left: 5px;
+    font-size: 12px
+}
+
+.top {
+    margin-top: 80px;
+}
+
+.inputdiv {
+    margin-top: 10px;
+}
+
+.sel {
+    background: #dff0d8;
+    color: #3c763d;
+}
+
+.carall {
+    border: 1px solid #C0C0C0;
+    border-radius: 20px;
+}
+
+.carlocation {
+    margin-left: 30px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    clear: both;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 9px
+}
+
+.mincar {
+    width: 80px;
+    height: 80px;
+    background: #00B51D;
+    float: left;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.mincartwo {
+    width: 80px;
+    height: 80px;
+    background: #ff5000;
+    float: left;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.maxcar {
+    width: 80px;
+    height: 80px;
+    background: #ff5000;
+    float: left;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.maxcartwo {
+    width: 80px;
+    height: 80px;
+    background: #00B51D;
+    float: left;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cardown {
+    width: 30px;
+    height: 80px;
+    background: #f000;
+    float: left;
+    margin-top: 20px
+}
+
+.error {
+    color: red;
+}
+
+.OCRcarnumber {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 3px;
+    text-align: center;
+    background: #00B51D;
+    display: block;
+    border-radius: 10px;
+    color: white;
+}

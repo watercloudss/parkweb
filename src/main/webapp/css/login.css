@@ -1,0 +1,84 @@
+.main {
+    margin-top: 200px;
+    background: #d6edff;
+}
+
+.logo-text {
+    color: #777;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.maxlogotext {
+    margin-top: 20px;
+    color: #2daebf;
+    font-family: "Merriweather", "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif;
+}
+
+.form-location {
+    margin: 40px 30px;
+}
+
+.right {
+    height: 320px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    border: 1px solid #a0b1c4;
+}
+
+.errorText {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+}
+
+.canvasBox {
+    position: relative;
+    margin-top: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.canvasBox .imgBox {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.canvasBox .refresh {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/update.png');
+    background-size: 100%;
+    border: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 3px;
+}
+
+.btn {
+    background: #37a;
+    height: 35px;
+    width: 100px;
+    color: white;
+    border-radius: 7px
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.forget {
+    margin-left: 30px;
+}

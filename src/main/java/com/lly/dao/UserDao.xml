@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lly.dao.UserDao">
+    <sql id="selectUserWhere">
+        <where>
+            <if test="code != null and code !=''">
+                code = #{code}
+            </if>
+            <if test="username != null and username !=''">
+                and username = #{username}
+            </if>
+            <if test="name != null and name !=''">
+                and name like "%"#{name}"%"
+            </if>
+        </where>
+    </sql>
+    <!-- 查询用户 -->
+    <select id="selectUserById" resultType="user">
+		select * from user where id=#{id}
+	</select>
+    <select id="findUser" parameterType="String" resultType="user">
+		select * from user where username = #{username} and password =#{password}
+		and state = '1'
+	</select>
+    <select id="findByUsername" parameterType="String"
+            resultType="user">
+		select * from user where username = #{username} and state = '1'
+	</select>
+    <select id="findByCode" parameterType="String" resultType="user">
+		select * from user where code = #{code}
+	</select>
+    <update id="updatePassword">
+		update user set password=#{password} where id=#{id}
+	</update>
+    <update id="updateUserInfo" parameterType="user">
+		update user set name=#{name},email=#{email},phone=#{phone},say=#{say} where
+		id=#{id}
+	</update>
+    <update id="updateUserImg">
+		update user set headImg=#{headImg} where id=#{id}
+	</update>
+
+    <select id="userList" resultType="user">
+        select * from user
+        <include refid="selectUserWhere"/>
+        <if test="start !=null and rows != null">
+            limit #{start},#{rows}
+        </if>
+    </select>
+    <select id="userCount" resultType="Integer">
+        select count(*) from user
+        <include refid="selectUserWhere"/>
+    </select>
+    <delete id="deleteUser">
+		delete from user where id=#{id}
+	</delete>
+    <update id="updateUserState">
+		update user set state=#{state} where id=#{id}
+	</update>
+    <update id="updateUserType">
+		update user set type=#{type} where id=#{id}
+	</update>
+    <insert id="insertUser" parameterType="user">
+		insert into user
+		values(null,#{code},#{username},#{password},#{name},#{sex},#{email},#{phone},#{headImg},#{say},#{state},#{type})
+	</insert>
+</mapper>
