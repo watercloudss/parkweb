@@ -8,7 +8,7 @@
 在计算费用时，可能会出现一点小误差，目前正在寻找解决方法，可能是数据库price列设置为double导致数据不精准<br>
 写这个系统主要是为了调用下百度AI接口和写出好看的页面，前端做的还可以，后端就有点.....小问题.....略过吧，哈哈哈！！！！！<br>
 识别截图如下：<br>
-<img src="https://github.com/liuliyuan666/parkweb/blob/master/images/5.PNG" width="650"/>
+<img src="https://raw.githubusercontent.com/liuliyuan666/parkweb/master/images/5.PNG" width="650"/>
 <img src="https://github.com/liuliyuan666/parkweb/blob/master/images/4.PNG" width="650"/>
 <br>
 系统的前端主要使用Bootstrap框架和jquery框架，加之css进行修改美化，主页面如下：<br>
