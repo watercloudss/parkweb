@@ -86,6 +86,14 @@
         .error{
             color:red;
         }
+        .icon{
+            height:15px;
+            width: 15px;
+        }
+        .icon-text {
+            margin-left: 5px;
+            font-size: 12px;
+        }
     </style>
     <script type="text/javascript">
         function submitText(){
@@ -152,8 +160,8 @@
 </head>
 <body>
 <!--导航栏开始-->
-<c:import url="navbarModel.jsp"></c:import>
 
+<c:import url="navbarModel.jsp"></c:import>
 <!--标题-->
 <div class="container">
     <div class="row">

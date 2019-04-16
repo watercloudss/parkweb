@@ -75,8 +75,6 @@ public class UserController {
 
     @RequestMapping(value = "login.action", method = RequestMethod.POST)
     public String login(String username, String password, Model model, HttpSession session) {
-        System.out.println("热部署成功了");
-        System.out.println("卧槽");
         User user = userService.findUser(username, password);
         if (user != null) {
             session.setAttribute("USER_LOGIN", user);
