@@ -195,7 +195,6 @@
       </resource>
     </resources>
     <finalName>parkweb</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -217,6 +216,5 @@
           </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>
