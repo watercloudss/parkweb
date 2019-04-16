@@ -18,4 +18,4 @@
 <img src="https://raw.githubusercontent.com/flowingwaters/images/master/parkweb-img/7.PNG" width="650"/>
 <br>
 计算费用页面（有不足）：<br>
-<img src="https://raw.githubusercontent.com/flowingwaters/images/master/parkweb-img/8.PNG.PNG" width="650"/>
+<img src="https://raw.githubusercontent.com/flowingwaters/images/master/parkweb-img/8.PNG" width="650"/>
