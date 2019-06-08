@@ -14,6 +14,9 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
         // 获取请求的URL
         String url = request.getRequestURI();
+        String method=request.getMethod();
+        //查看拦截的是什么类型的方法
+        System.out.println(method);
         System.out.println("url为" + url);
         // URL:除了登录请求外，其他的URL都进行拦截控制
         if (url.indexOf("/login.action") >= 0) {
